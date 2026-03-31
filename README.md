@@ -1,5 +1,3 @@
-# Cardputer-Flashlight-ADV
-Smart flashlight firmware for M5Stack Cardputer. Features non-blocking state machine, debounce, Strobe, and Red Light modes.
 ![Version](https://img.shields.io/badge/Version-1.0-blue)
 ![Hardware](https://img.shields.io/badge/Hardware-Cardputer-orange)
 ![Platform](https://img.shields.io/badge/Platform-M5Stack-red)
