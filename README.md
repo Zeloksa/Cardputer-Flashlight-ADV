@@ -1,16 +1,16 @@
 ![Version](https://img.shields.io/badge/Version-1.0-blue)
-![Hardware](https://img.shields.io/badge/Hardware-Cardputer-orange)
+![Hardware](https://img.shields.io/badge/Hardware-Cardputer_ADV-orange)
 ![Platform](https://img.shields.io/badge/Platform-M5Stack-red)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-Proprietary-gray)
 [![Boosty](https://img.shields.io/badge/Support-Boosty-orange)](https://boosty.to/zeloksa)
 
-# 🔦 M5Stack Cardputer Flashlight (V1.0)
+# 🔦 M5Stack Cardputer ADV Flashlight (V1.0)
 
-**Flashlight V1.0** is a highly optimized, state-machine-based illumination utility for the **M5Stack Cardputer**. It repurposes the device's TFT display as a multi-mode light source, featuring standard white light, tactical red light, and a high-frequency strobe.
+**Flashlight V1.0** is a highly optimized, state-machine-based illumination utility for the **M5Stack Cardputer ADV**. It repurposes the device's TFT display as a multi-mode light source, featuring standard white light, tactical red light, and a high-frequency strobe.
 
-> [!NOTE]
-> **Source Code Status:** Open Source. 
-> Written purely in C++ using the `<M5Cardputer.h>` library without third-party button dependencies.
+> [!IMPORTANT]
+> **Source Code Status:** This project is proprietary. The source code is private. 
+> **Distribution:** Binary only via **M5Burner**.
 
 ---
 
@@ -26,17 +26,16 @@
 
 ## 🛠 Installation
 
-1. Clone or download this repository.
-2. Open `Main.ino` in the **Arduino IDE**.
-3. Ensure you have the [M5Cardputer library](https://github.com/m5stack/M5Cardputer) installed.
-4. Select **M5Cardputer** in the board manager.
-5. Compile and upload to your device.
+1. Open **M5Burner**.
+2. Search for `Flashlight` or `Zeloksa`.
+3. Select version **V1.0**.
+4. Burn to your M5Stack Cardputer ADV.
 
 ---
 
 ## 🕹 Controls & Usage
 
-Interaction works by pressing **ANY** key on the Cardputer's matrix keyboard. 
+Interaction works by pressing **ANY** key on the Cardputer ADV's matrix keyboard. 
 
 * **[ Single Click ]**: Power Toggle. Turns the flashlight ON (restoring the last used color) or OFF.
 * **[ Double Click ]**: Strobe Toggle. Instantly enters or exits a high-frequency (50ms interval) white/black flashing sequence. Exiting returns to the previous color state.
@@ -68,4 +67,4 @@ If this tool has been useful for your EDC (Everyday Carry) or projects, consider
 * **[https://boosty.to/zeloksa](https://boosty.to/zeloksa)**
 
 ---
-*Created by Zeloksa. Optimized for Cardputer.*
+*Created by Zeloksa. Optimized for Cardputer ADV.*
