@@ -27,7 +27,7 @@
 ## 🛠 Installation
 
 1. Open **M5Burner**.
-2. Search for `Flashlight` or `Zeloksa`.
+2. Search for `ADV Flashlight` or `Zeloksa`.
 3. Select version **V1.0**.
 4. Burn to your M5Stack Cardputer ADV.
 
