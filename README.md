@@ -1,12 +1,12 @@
-![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Version](https://img.shields.io/badge/Version-1.1-blue)
 ![Hardware](https://img.shields.io/badge/Hardware-Cardputer_ADV-orange)
 ![Platform](https://img.shields.io/badge/Platform-M5Stack-red)
 ![License](https://img.shields.io/badge/License-Proprietary-gray)
 [![Boosty](https://img.shields.io/badge/Support-Boosty-orange)](https://boosty.to/zeloksa)
 
-# 🔦 M5Stack Cardputer ADV Flashlight (V1.0)
+# 🔦 M5Stack Cardputer ADV Flashlight (V1.1)
 
-**Flashlight V1.0** is a highly optimized, state-machine-based illumination utility for the **M5Stack Cardputer ADV**. It repurposes the device's TFT display as a multi-mode light source, featuring standard white light, tactical red light, and a high-frequency strobe.
+**Flashlight V1.1** is a highly optimized, state-machine-based illumination utility for the **M5Stack Cardputer ADV**. It repurposes the device's TFT display and the built-in RGB LED as a synchronized multi-mode light source, featuring standard white light, tactical red light, and a high-frequency strobe.
 
 > [!IMPORTANT]
 > **Source Code Status:** This project is proprietary. The source code is private. 
@@ -16,6 +16,7 @@
 
 ## ⚡ Technical Highlights
 
+* **Hardware RGB LED Sync:** The built-in StampS3 WS2812 LED (GPIO 21) perfectly mirrors the screen state in real-time. It uses native ESP32 core functions (`neopixelWrite`) to achieve instant color switching without relying on heavy third-party libraries.
 * **Non-Blocking State Machine:** The core architecture relies entirely on `millis()` for timer management. Zero `delay()` calls ensure instant responsiveness and prevent CPU blocking.
 * **Custom Debounce & Click Detection Core:** Features a custom-built event listener that accurately distinguishes between single clicks, double clicks, and prolonged holds using leading-edge and trailing-edge logic.
 * **Smart Color Memory:** The system remembers your last active illumination mode (White or Red). Turning the flashlight off and on via a single click will restore the previous state.
@@ -27,8 +28,8 @@
 ## 🛠 Installation
 
 1. Open **M5Burner**.
-2. Search for `ADV Flashlight` or `Zeloksa`.
-3. Select version **V1.0**.
+2. Search for `Flashlight ADV` or `Zeloksa`.
+3. Select version **V1.1**.
 4. Burn to your M5Stack Cardputer ADV.
 
 ---
@@ -47,10 +48,10 @@ Interaction works by pressing **ANY** key on the Cardputer ADV's matrix keyboard
 
 | State | Brightness | Action |
 | :--- | :--- | :--- |
-| `STATE_WHITE` | 255 | Solid `TFT_WHITE` fill. |
-| `STATE_RED` | 255 | Solid `TFT_RED` fill for night vision preservation. |
-| `STATE_STROBE` | 255 | Alternating `TFT_WHITE` / `TFT_BLACK` every 50ms. |
-| `STATE_OFF` | 0 | Screen brightness killed, VRAM filled with `TFT_BLACK`. |
+| `STATE_WHITE` | 255 | Solid `TFT_WHITE` fill. RGB LED set to White. |
+| `STATE_RED` | 255 | Solid `TFT_RED` fill for night vision preservation. RGB LED set to Red. |
+| `STATE_STROBE` | 255 | Alternating `TFT_WHITE` / `TFT_BLACK` every 50ms. RGB LED flashes in sync. |
+| `STATE_OFF` | 0 | Screen brightness killed, VRAM filled with `TFT_BLACK`. RGB LED turned off. |
 
 ---
 
